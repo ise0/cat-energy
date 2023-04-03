@@ -34,19 +34,19 @@ export function ExtraCatalog({ className, size }: Props) {
 
   return (
     <section className={cn(styles['extra-catalog'], className)}>
-      <h2 className={cn(styles['extra-catalog__title'])}>
-        <span className={cn(styles['extra-catalog__title-text'])}>Дополнительные товары</span>
+      <h2 className={styles['extra-catalog__title']}>
+        <span className={styles['extra-catalog__title-text']}>Дополнительные товары</span>
       </h2>
 
-      <div className={cn(styles['extra-catalog__container'])}>
-        <ul className={cn(styles['extra-catalog__products'])}>
+      <div className={styles['extra-catalog__container']}>
+        <ul className={styles['extra-catalog__products']}>
           {products.map(({ name, productPackage, price }) => (
-            <li className={cn(styles['extra-catalog__product product'])} key={name}>
-              <div className={cn(styles['product__inner'])}>
-                <div className={cn(styles['product__details'])}>
-                  <h3 className={cn(styles['product__name'])}>{name}</h3>
-                  <p className={cn(styles['product__package'])}>{productPackage}</p>
-                  <p className={cn(styles['product__price'])}>{price}</p>
+            <li className={cn(styles['extra-catalog__product'], styles['product'])} key={name}>
+              <div className={styles['product__inner']}>
+                <div className={styles['product__details']}>
+                  <h3 className={styles['product__name']}>{name}</h3>
+                  <p className={styles['product__package']}>{productPackage}</p>
+                  <p className={styles['product__price']}>{price}</p>
                 </div>
 
                 <BtnLink
