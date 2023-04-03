@@ -2,13 +2,13 @@ import { Header } from 'widgets/header';
 import { Footer } from 'widgets/footer';
 import { Partnership } from 'widgets/partnership';
 import { getStyles } from './styles';
-import { useEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import { PetForm } from './blocks/pet-form';
 
 const PetFormPage = () => {
   const [windowWidth, setWindowWidth] = useState(0);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const onWindowResize = () => setWindowWidth(window.innerWidth);
     onWindowResize();
     window.addEventListener('resize', onWindowResize);

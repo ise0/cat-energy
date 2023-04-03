@@ -7,12 +7,12 @@ import { Footer } from 'widgets/footer';
 import { Partnership } from 'widgets/partnership';
 import { getStyles } from './styles';
 import cn from 'classnames';
-import { useEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 
 const IndexPage = () => {
   const [windowWidth, setWindowWidth] = useState(0);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const onWindowResize = () => setWindowWidth(window.innerWidth);
     onWindowResize();
     window.addEventListener('resize', onWindowResize);

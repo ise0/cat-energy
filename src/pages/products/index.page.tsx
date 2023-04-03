@@ -1,7 +1,7 @@
 import { Header } from 'widgets/header';
 import { Footer } from 'widgets/footer';
 import { Partnership } from 'widgets/partnership';
-import { useEffect, useState } from 'react';
+import { useLayoutEffect, useState } from 'react';
 import { getStyles } from './styles';
 import { Catalog } from './blocks/catalog';
 import { ExtraCatalog } from './blocks/extra-catalog';
@@ -9,7 +9,7 @@ import { ExtraCatalog } from './blocks/extra-catalog';
 const CatalogPage = () => {
   const [windowWidth, setWindowWidth] = useState(0);
 
-  useEffect(() => {
+  useLayoutEffect(() => {
     const onWindowResize = () => setWindowWidth(window.innerWidth);
     onWindowResize();
     window.addEventListener('resize', onWindowResize);

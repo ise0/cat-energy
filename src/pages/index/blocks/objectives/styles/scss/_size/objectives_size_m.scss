@@ -82,7 +82,7 @@
       height: 192px;
       width: 140px;
 
-      background: url('/images/icon-cat-slim.svg') no-repeat;
+      background: center/contain no-repeat url('/images/icon-cat-slim.svg');
     }
   }
 
@@ -99,7 +99,7 @@
       height: 112px;
       width: 268px;
 
-      background: url('/images/icon-cat-pro.svg') no-repeat;
+      background: center/contain no-repeat url('/images/icon-cat-pro.svg');
     }
   }
 }
